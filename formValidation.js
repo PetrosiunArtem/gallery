@@ -31,7 +31,7 @@ function validTelephoneInput() {
         telephoneError.innerHTML = 'Номер начинается с семерки и еще после должно быть ровно 10 цифр!';
     } else {
         myTelephoneInput.className = 'valid';
-        telephoneError.className = 'show show-out';
+        telephoneError.innerHTML = '';
     }
     validForm();
 }
