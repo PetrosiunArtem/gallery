@@ -7,69 +7,75 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-<header class="header"  id="menu">
-    <h3 id="timer">Первый экзамен начнется через <span id="date"></span></h3>
-    <a href="#" class="open-popup">Обратная связь</a>
-</header>
-<section id="notification-popup" class="notification-popup__bg">
-    <div class="notification-popup">
-        <img src="img/close.svg" class="close-notification-popup" alt="">
-        <h1>Пожалуйста, не забудьте оставить отзыв!</h1>
-    </div>
+    <header class="header" id="menu">
+        <h3 id="timer">Первый экзамен начнется через <span id="date"></span></h3>
+        <a href="#" class="open-popup">Обратная связь</a>
+    </header>
+    <section id="notification-popup" class="notification-popup__bg">
+        <div class="notification-popup">
+            <img src="img/close.svg" class="close-notification-popup" alt="">
+            <h1>Пожалуйста, не забудьте оставить отзыв!</h1>
+        </div>
 
-</section>
-<section class="image-popup__bg" id="image-popup__bg">
-    <div class="image-popup" id="image-popup">
-        <img src="img/ArrowLeft.svg" id="prev" class="prev-button" alt="">
-        <img src="" class="current-image" id="current-image" alt="">
-        <img src="img/ArrowRight.svg" id="next" class="next-button" alt="">
-        <img src="img/close.svg" class="close-image-popup" alt="">
-    </div>
+    </section>
+    <section class="image-popup__bg" id="image-popup__bg">
+        <div class="image-popup" id="image-popup">
+            <img src="img/ArrowLeft.svg" id="prev" class="prev-button" alt="">
+            <img src="" class="current-image" id="current-image" alt="">
+            <img src="img/ArrowRight.svg" id="next" class="next-button" alt="">
+            <img src="img/close.svg" class="close-image-popup" alt="">
+        </div>
 
-</section>
-<section id="gallery">
-    <img src="img/dark souls.jpg" width="230" height="230"  class="gallery-image" alt="">
-    <img src="img/cuphead.jpg" width="230" height="230" class="gallery-image" alt="">
-    <img src="img/Baldurs Gate 3.jpg" width="230" height="230" class="gallery-image" alt="">
-    <img src="img/The Witcher.jpg" width="230" height="230" class="gallery-image" alt="">
-    <img src="img/Rayman Legends.jpg" width="230" height="230"  class="gallery-image" alt="">
-    <img src="img/XCOM 2.jpg" width="230" height="230"  class="gallery-image" alt="">
-    <img src="img/Minecraft.jpg" width="230" height="230"  class="gallery-image" alt="">
-    <img src="img/Dont starve together.jpg" width="230" height="230"  class="gallery-image" alt="">
-    <img src="img/MGR 5.jpg" width="230" height="230"  class="gallery-image" alt="">
-    <img src="img/Enter the Gungeon.jpg" width="230" height="230"  class="gallery-image" alt="">
-</section>
-<div class="popup__bg">
-    <form class="popup" action="/send" name="/sendForm" method="post" autocomplete="on">
-        <img src="img/close.svg" class="close-popup" alt="">
-        <label>
-            <input type="text" name="name">
-            <div class="label__text">
-                Ваше имя
-            </div>
-        </label>
-        <label>
-            <input type="tel" name="tel">
-            <div class="label__text">
-                Ваш телефон
-            </div>
-        </label>
-        <label>
-            <textarea name="message"></textarea>
-            <div class="label__text">
-                Ваше сообщение
-            </div>
-        </label>
-        <button type="submit">Отправить</button>
-    </form>
-</div>
-<footer class="footer">
-    <p>©2025 Made by Petrosian Artem</p>
-</footer>
-<script src="timer.js"></script>
-<script src="formValidation.js"></script>
-<script src="headerScript.js"></script>
-<script src="notification.js"></script>
-<script src="popupImages.js"></script>
+    </section>
+    <section id="gallery">
+        <img src="img/dark souls.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/cuphead.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/Baldurs Gate 3.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/The Witcher.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/Rayman Legends.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/XCOM 2.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/Minecraft.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/Dont starve together.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/MGR 5.jpg" width="230" height="230" class="gallery-image" alt="">
+        <img src="img/Enter the Gungeon.jpg" width="230" height="230" class="gallery-image" alt="">
+    </section>
+    <div class="popup__bg">
+        <form class="popup" action="index.html" method="post" novalidate id="form">
+            <h3 id="telError"></h3>
+            <h3 id="emailError"></h3>
+            <h3 id="textError"></h3>
+            <img src="img/close.svg" class="close-popup" id="close-popup" alt="">
+            <label>
+                <input name="name" id="email">
+                <div class="label__text">
+                    Ваша почта
+                </div>
+            </label>
+            <label>
+                <input name="tel" id="tel">
+                <div class="label__text">
+                    Ваш телефон
+                </div>
+            </label>
+            <label>
+                <textarea name="message" id="message"></textarea>
+                <div class="label__text">
+                    Ваше сообщение
+                </div>
+            </label>
+            <button type="submit" id="send-button" disabled>Отправить</button>
+        </form>
+    </div>
+    <svg id="game" class="game"></svg>
+
+    <footer class="footer">
+        <p>©2025 Made by Petrosian Artem</p>
+    </footer>
+    <script src="timer.js"></script>
+    <script src="formValidation.js"></script>
+    <script src="headerScript.js"></script>
+    <script src="notification.js"></script>
+    <script src="popupImages.js"></script>
+    <script src="backgroundAnimations.js"></script>
 </body>
 </html>
