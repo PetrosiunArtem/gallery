@@ -2,7 +2,7 @@ function validateIndexes(index) {
 
     if (index === 0) {
         prev.style = 'display: none; opacity: 0;';
-    } else if (index + 1 === gallery.querySelectorAll('img').length) {
+    } else if (index + 1 === gallery.querySelectorAll('gallery__item').length) {
         next.style = 'display: none;  opacity: 0;';
     } else {
         prev.style = '';
@@ -45,7 +45,7 @@ function showPopup(event) {
     }
 }
 
-let images = Array.from(document.getElementsByClassName("gallery-image"));
+let images = Array.from(document.getElementsByClassName("gallery__image"));
 
 const gallery = document.getElementById('gallery');
 const next = document.getElementById('next');
