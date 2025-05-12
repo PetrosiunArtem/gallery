@@ -72,19 +72,17 @@ function mySendMessageForm(event) {
         const formData = new FormData(myForm);
         fetch(myForm.action, {
             method: 'POST', body: formData
-        }).then((response) => {
-            if (response.ok) {
-                setTimeout(() => {
-                    mySendButton.textContent = "Мы приняли ваш отзыв, спасибо!";
-                }, 2000);
-                setTimeout(() => {
-                    myForm.reset();
-                    mySendButton.textContent = "Отправить";
-                }, 4000)
-                mySendButton.disabled = true;
-            } else {
-                alert("Что-то пошло не так")
-            }
+        }).then(() => {
+
+            setTimeout(() => {
+                mySendButton.textContent = "Мы приняли ваш отзыв, спасибо!";
+            }, 2000);
+            setTimeout(() => {
+                myForm.reset();
+                mySendButton.textContent = "Отправить";
+            }, 4000)
+            mySendButton.disabled = true;
+
         })
     }, 1000);
 }
