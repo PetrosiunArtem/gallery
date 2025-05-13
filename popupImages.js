@@ -2,7 +2,7 @@ function validateIndexes(index) {
 
     if (index === 0) {
         prev.style = 'display: none; opacity: 0;';
-    } else if (index + 1 === gallery.querySelectorAll('gallery__item').length) {
+    } else if (index + 1 === gallery.querySelectorAll('.gallery__item').length) {
         next.style = 'display: none;  opacity: 0;';
     } else {
         prev.style = '';
